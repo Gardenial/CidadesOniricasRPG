@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('.section-chapter');
+    
+            function fadeIn() {
+                sections.forEach((section, index) => {
+                    setTimeout(() => {
+                        section.style.opacity = '1';
+                        section.style.transform = 'translateY(0)';
+                    }, 300 * index);
+                });
+            }
+    
+            fadeIn();
+        });
+    </script>
+    <title>Cidades Oníricas - Índice</title>
+</head>
+<body class="index">
+    <header class="bg-light">
+        <h1 class="text-center mb-4">Cidades Oníricas</h1>
+    </header>
+    
+    <main class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="section-chapter mb-4"  onclick="window.location.href='Capítulos/capitulo1.html';">
+                    <h2>Capítulo 1</h2>
+                    <p>Mundo e Ambientação</p>
+                </div>
+
+                <div class="section-chapter mb-4" onclick="window.location.href='Capítulos/capitulo2.html';">
+                    <h2>Capítulo 2</h2>
+                    <p>Sistema de Regras</p>
+                </div>
+
+                <div class="section-chapter mb-4" onclick="window.location.href='Capítulos/capitulo3.html';">
+                    <h2>Capítulo 3</h2>
+                    <p>Personagens</p>
+                </div>
+
+                <div class="section-chapter mb-4" onclick="window.location.href='Capítulos/capitulo4.html';">
+                    <h2>Capítulo 4</h2>
+                    <p>Classes</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="section-chapter mb-4" onclick="window.location.href='Capítulos/capitulo5.html';">
+                    <h2>Capítulo 5</h2>
+                    <p>Combate</p>
+                </div>
+
+                <div class="section-chapter mb-4" onclick="window.location.href='Capítulos/capitulo6.html';">
+                    <h2>Capítulo 6</h2>
+                    <p>Itens e Equipamentos</p>
+                </div>
+
+                <div class="section-chapter mb-4" onclick="window.location.href='Capítulos/capitulo7.html';">
+                    <h2>Capítulo 7</h2>
+                    <p>Magia e Habilidades Especiais</p>
+                </div>
+
+                <div class="section-chapter mb-4" onclick="window.location.href='Capítulos/capitulo8.html';">
+                    <h2>Capítulo 8</h2>
+                    <p>Fichas de Personagem</p>
+                </div>
+
+
+
+
+
+
+<!--                 <section>
+                    <div class="section-chapter mb-4" onclick="window.location.href='consultar_ficha.html';">
+                        <h2>Consultar Ficha</h2>
+                        <p>Visualize e edite sua ficha em tempo real.</p>
+                    </div>
+                </section> -->
+
+
+
+                
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-light text-center py-4">
+        <p>&copy; 2023 Cidades Oníricas</p>
+    </footer>
+</body>
+</html>

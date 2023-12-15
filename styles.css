@@ -1,0 +1,180 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFE2E2;
+    color: #68785A;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #68785A;
+}
+
+main {
+    padding: 20px 0;
+}
+
+.section-chapter {
+    background-color: rgba(255, 246, 246, 1); /* Cor inicial sem transparência */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section-chapter:hover {
+    background-color: rgba(255, 246, 246, 0.8); /* Cor com transparência durante o hover */
+}
+
+
+h2 {
+    color: #68785A;
+    border-bottom: 2px solid #FF6F61;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #FFE2E2;
+    color: #68785A;
+}
+
+/* Estilo do botão de voltar */
+.btn-back {
+    background-color: #6b5b95; /* Cor de fundo */
+    color: #ffffff; /* Cor do texto */
+    border: none; /* Remover a borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    margin-top: 20px; /* Espaçamento superior */
+    text-decoration: none; /* Remover sublinhado padrão */
+    display: inline-block; /* Exibir como bloco em linha */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor estilo ponteiro */
+    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+    display: block;
+    margin: 20px auto 30%; /* Altere o valor de 'margin-top' conforme necessário */
+    text-align: center;
+}
+
+.btn-back:hover {
+    background-color: #8d8aee; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilização específica para a página index */
+body.index #section-chapter-1:hover,
+body.index #section-chapter-2:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estilização específica para as seções nos capítulos (sem animações) */
+body.index .section-chapter:not(:hover) {
+    transform: none;
+    transition: none;
+}
+/* Adicione o seguinte bloco de código para estilizar o hr */
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 96%;               
+    background-color:#ccc;
+    height: 1px;
+    margin: 10px auto;
+}
+
+/* Adicione os seguintes blocos de código para estilizar a tabela */
+table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: #f8f9fa;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+th {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+/* Adicione o seguinte bloco para efeito de brilho nas células da tabela */
+td:hover {
+    background-color: rgba(255, 199, 199, 0.5);
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffc7c7;
+    padding: 20px;
+}
+
+header h1 {
+    color: #6f0000;
+}
+
+main {
+    padding: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #6f0000;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #6f0000;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #903232;
+}
+
+

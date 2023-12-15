@@ -1,0 +1,77 @@
+<!-- consultar_ficha.php -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Certifique-se de ajustar o caminho do seu arquivo CSS -->
+    <title>Consultar Ficha</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ficha do Personagem</h1>
+
+        <!-- Informações Básicas -->
+        <h2>Informações Básicas</h2>
+        <label for="nome">Nome do Personagem:</label>
+        <p><?php echo $nome; ?></p>
+
+        <label for="raca">Raça:</label>
+        <p><?php echo $raca; ?></p>
+
+        <label for="classe">Classe:</label>
+        <p><?php echo $classe; ?></p>
+
+        <label for="guilda">Guilda:</label>
+        <p><?php echo $guilda; ?></p>
+
+        <label for="nivel">Nível:</label>
+        <p><?php echo $nivel; ?></p>
+
+        <label for="experiencia">Experiência:</label>
+        <p><?php echo $experiencia; ?></p>
+
+        <label for="origem_onirica">Origem Onírica:</label>
+        <p><?php echo $origem_onirica; ?></p>
+
+        <!-- Atributos -->
+        <h2>Atributos</h2>
+        <label for="forca">Força:</label>
+        <p><?php echo $forca; ?></p>
+
+        <label for="destreza">Destreza:</label>
+        <p><?php echo $destreza; ?></p>
+
+        <label for="constituicao">Constituição:</label>
+        <p><?php echo $constituicao; ?></p>
+
+        <label for="inteligencia">Inteligência:</label>
+        <p><?php echo $inteligencia; ?></p>
+
+        <label for="sabedoria">Sabedoria:</label>
+        <p><?php echo $sabedoria; ?></p>
+
+        <label for="carisma">Carisma:</label>
+        <p><?php echo $carisma; ?></p>
+
+        <!-- Saúde e Recursos -->
+        <h2>Saúde e Recursos</h2>
+        <label for="pv">Pontos de Vida (PV):</label>
+        <p><?php echo $pv; ?></p>
+
+        <label for="ps">Pontos de Sonho (PS):</label>
+        <p><?php echo $ps; ?></p>
+
+        <label for="pm">Pontos de Magia (PM):</label>
+        <p><?php echo $pm; ?></p>
+
+        <!-- Adicione outras seções e estilizações conforme necessário -->
+
+        <!-- Editar Ficha Button -->
+        <button onclick="window.location.href='editar_ficha.html';">Editar Ficha</button>
+    </div>
+
+</body>
+</html>

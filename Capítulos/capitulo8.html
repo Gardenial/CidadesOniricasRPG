@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffc7c7; /* Cor de fundo - rosa claro */
+    color: #333; /* Cor do texto - preto */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff; /* Cor de fundo do formulário - branco */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #f68785; /* Cor do título - rosa médio */
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #f68785; /* Cor do texto do label - rosa médio */
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* Cor da borda do campo - cinza claro */
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #f68785; /* Cor de fundo do botão - rosa médio */
+    color: #fff; /* Cor do texto do botão - branco */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff4455; /* Cor de fundo do botão ao passar o mouse - rosa mais escuro */
+}
+
+.attributes-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.attributes,
+.health-resources {
+    width: 48%; /* Cada parte ocupa 48% do contêiner para dar algum espaço entre eles */
+    box-sizing: border-box;
+}
+
+.attributes label,
+.health-resources label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #f68785; /* Cor do texto do label - rosa médio */
+}
+
+.attributes input,
+.health-resources input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* Cor da borda do campo - cinza claro */
+    border-radius: 4px;
+}
+
+.basic-info-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Quebra para a próxima linha se não houver espaço suficiente */
+}
+
+.level-experience {
+    width: 48%; /* Cada parte ocupa 48% do contêiner para dar algum espaço entre eles */
+    box-sizing: border-box;
+}
+
+.level-experience label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #f68785; /* Cor do texto do label - rosa médio */
+}
+
+.level-experience input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* Cor da borda do campo - cinza claro */
+    border-radius: 4px;
+}
+
+
+</style>
+
+<title>Ficha do Personagem - Cidades Oníricas</title>
+</head>
+<body>
+    <header class="bg-light">
+        <h1 class="text-center mb-4">Ficha do Personagem</h1>
+    </header>
+
+    <main class="container">
+        <form action="processar_ficha.php" method="post">
+            <!-- Informações Básicas -->
+            <h2>Informações Básicas</h2>
+            <div class="basic-info-container">
+            <label for="nome">Nome do Personagem:</label>
+            <input type="text" name="nome" required>
+
+            <label for="raca">Raça:</label>
+            <input type="text" name="raca" required>
+
+            <label for="classe">Classe:</label>
+            <input type="text" name="classe" required>
+
+            <label for="guilda">Guilda:</label>
+            <input type="text" name="guilda">
+
+            <label for="origem_onirica">Origem Onírica:</label>
+            <input type="text" name="origem_onirica">
+
+            <!-- Nível e Experiência -->
+            <div class="level-experience">
+                <label>Nível:</label>
+                <input type="number" name="nivel" min="1" required>
+
+                <label>Experiência:</label>
+                <input type="number" name="experiencia" min="0" required>
+            </div>
+        </div>
+
+
+            <!-- Saúde e Recursos -->
+<h1>Saúde e Recursos</h1>
+<div class="attributes-container">
+    <!-- Atributos -->
+    <div class="attributes">
+        <label>Força:</label>
+        <input type="number" name="forca" min="1" max="20" required>
+
+        <label>Destreza:</label>
+        <input type="number" name="destreza" min="1" max="20" required>
+
+        <label>Constituição:</label>
+        <input type="number" name="constituicao" min="1" max="20" required>
+
+        <label>Inteligência:</label>
+        <input type="number" name="inteligencia" min="1" max="20" required>
+
+        <label>Sabedoria:</label>
+        <input type="number" name="sabedoria" min="1" max="20" required>
+
+        <label>Carisma:</label>
+        <input type="number" name="carisma" min="1" max="20" required>
+    </div>
+
+    <!-- Saúde e Recursos -->
+    <div class="health-resources">
+        <label>Pontos de Vida (PV):</label>
+        <input type="number" name="pontos_vida" min="1" required>
+
+        <label>Pontos de Sonho (PS):</label>
+        <input type="number" name="pontos_sonho" min="1" required>
+
+        <label>Pontos de Magia (PM):</label>
+        <input type="number" name="pontos_magia" min="1" required>
+    </div>
+</div>
+
+<!-- Habilidades e Perícias -->
+<h2>Habilidades e Perícias</h2>
+
+<div id="habilidades-container">
+  <!-- Aqui serão adicionadas dinamicamente as habilidades e perícias -->
+</div>
+
+<button style="margin-bottom: 2%;" onclick="adicionarHabilidade()">Adicionar Habilidade</button>
+
+<script>
+  function adicionarHabilidade() {
+    const container = document.getElementById("habilidades-container");
+
+    const div = document.createElement("div");
+
+    // Adicione os campos necessários para cada habilidade
+    div.innerHTML = `
+      <label for="nomeHabilidade">Nome:</label>
+      <input type="text" name="nomeHabilidade[]" required>
+
+      <label for="descricaoHabilidade">Descrição:</label>
+      <textarea name="descricaoHabilidade[]" rows="2" required></textarea>
+
+      <label for="nivelHabilidade">Nível Necessário:</label>
+      <input type="number" name="nivelHabilidade[]" required>
+
+      <!-- Adicione mais campos conforme necessário -->
+
+      <button onclick="excluirHabilidade(this)">Excluir</button>
+
+      <hr>
+    `;
+
+    container.appendChild(div);
+  }
+
+  function excluirHabilidade(botaoExcluir) {
+    const container = document.getElementById("habilidades-container");
+    const divParaExcluir = botaoExcluir.parentNode;
+    container.removeChild(divParaExcluir);
+  }
+</script>
+
+
+
+<!-- Equipamento -->
+<h2>Equipamento</h2>
+<label for="armaPrincipal">Arma Principal:</label>
+<input type="text" id="armaPrincipal" name="armaPrincipal">
+
+<label for="armaSecundaria">Arma Secundária:</label>
+<input type="text" id="armaSecundaria" name="armaSecundaria">
+
+<label for="armadura">Armadura:</label>
+<input type="text" id="armadura" name="armadura">
+
+<label for="itensMagicos">Itens Mágicos:</label>
+<textarea id="itensMagicos" name="itensMagicos" rows="4"></textarea>
+
+<!-- História do Personagem -->
+<h2>História do Personagem</h2>
+<label for="origem">Origem:</label>
+<textarea id="origem" name="origem" rows="4"></textarea>
+
+<label for="motivacoes">Motivações:</label>
+<textarea id="motivacoes" name="motivacoes" rows="4"></textarea>
+
+<label for="segredos">Segredos:</label>
+<textarea id="segredos" name="segredos" rows="4"></textarea>
+
+<!-- Aliados e Inimigos -->
+<h2>Aliados e Inimigos</h2>
+<label for="aliados">Aliados Conhecidos:</label>
+<textarea id="aliados" name="aliados" rows="4"></textarea>
+
+<label for="inimigos">Inimigos Jurados:</label>
+<textarea id="inimigos" name="inimigos" rows="4"></textarea>
+
+<!-- Notas e Observações -->
+<h2>Notas e Observações</h2>
+<label for="anotacoes">Anotações do Jogador:</label>
+<textarea id="anotacoes" name="anotacoes" rows="4"></textarea>
+
+<label for="eventosImportantes">Eventos Importantes:</label>
+<textarea id="eventosImportantes" name="eventosImportantes" rows="4"></textarea>
+
+
+            <button type="submit" class="btn btn-back">Enviar Ficha</button>
+            <a href="../index.html" class="btn btn-back">Voltar para o Índice</a>
+        </form>
+    </main>
+
+    <footer class="bg-light text-center py-4">
+        <p>&copy; 2023 Cidades Oníricas</p>
+    </footer>
+</body>
+</html>
